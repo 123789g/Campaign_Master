@@ -1,33 +1,409 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
+
+body {
+  background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px;
+}
+
+.Header {
+  padding: 2px;
+  flex: auto;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+/* Dice Component */
+.DiceBoxHeader {
+  font-style: italic;
+
+}
+
+.DiceBox {
+  -webkit-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  margin-top: 15px;
+  margin-left: 15px;
+  padding: 5px;
+  background: rgb(36, 36, 36);
+  border-radius: 15px;
+  width: 152px;
+  height: 195px;
+
+}
+
+.D4Container {
+  width: 20 px;
+  padding: 4px;
+  margin-left: 10px;
+  color: white;
+  text-shadow: 0px 1px 1px #4d4d4d;
+
+}
+
+.D4Value {
+  display: inline;
+  padding-left: 5px;
+  font-family: 'Cabin', sans-serif;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+.D6Container {
+  width: 20 px;
+  padding: 4px;
+  margin-left: 10px;
+  color: white;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+.D6Value {
+  display: inline;
+  padding-left: 5px;
+  font-family: 'Cabin', sans-serif;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+.D8Container {
+  width: 20 px;
+  padding: 4px;
+  margin-left: 10px;
+  color: white;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+.D8Value {
+  display: inline;
+  padding-left: 5px;
+  font-family: 'Cabin', sans-serif;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+.D10Container {
+  width: 20 px;
+  padding: 4px;
+  margin-left: 10px;
+  color: white;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+.D10Value {
+  display: inline;
+  padding-left: 5px;
+  font-family: 'Cabin', sans-serif;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+.D12Container {
+  width: 20 px;
+  padding: 4px;
+  margin-left: 10px;
+  color: white;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+.D12Value {
+  display: inline;
+  padding-left: 5px;
+  font-family: 'Cabin', sans-serif;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+.D20Container {
+  width: 20 px;
+  padding: 4px;
+  margin-left: 10px;
+  color: white;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+.D20Value {
+  display: inline;
+  padding-left: 5px;
+  font-family: 'Cabin', sans-serif;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+/* Button */
+button {
+  border-style: none;
+  border-radius: 4px;
+  background: #ba6d61;
+  color: white;
+  width: 40px;
+  padding: 3px 8px;
+  font-family: 'Cabin', sans-serif;
+  text-shadow: 0px 1px 1px #4d4d4d;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+button:hover {
+  background: #61aeba;
+}
+
+button:active {
+  background: #fff;
+  transform: translateY(2px);
+}
+
+/* Map Container */
+.mapContainer {
+  -webkit-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 185px;
+  padding: 5px;
+  display: flex;
+  background: rgb(36, 36, 36);
+  border-radius: 15px;
+  width: 600px;
+  height: 600px;
+}
+
+/* Custom Dice Component */
+.inputWrapper {
+  width: 47px;
+  padding: 3px 8px;
+  margin-left: 28px;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+input {
+  width: 80px;
+  border-style: transparent;
+  border-radius: 4px;
+  border-width: 1px;
+  font-size: 15px;
+  background: rgb(36, 36, 36);
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  text-align: center;
+  display: flex;
+}
+
+.customDiceBox {
+  -webkit-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  margin-top: 12px;
+  margin-left: 15px;
+  padding: 5px;
+  flex: auto;
+  text-align: center;
+  word-wrap: break-word;
+  background: rgb(36, 36, 36);
+  border-radius: 15px;
+  width: 152px;
+  height: 230px;
+}
+
+.customDiceHeader {
+  color: white;
+  width: 195px;
+  text-align: left;
+  font-family: 'Cabin', sans-serif;
+}
+
+.customDiceButtonCSS {
+  border-style: none;
+  border-radius: 4px;
+  background: #ba6d61;
+  color: white;
+  width: 47px;
+  padding: 3px 8px;
+  font-family: 'Cabin', sans-serif;
+}
+
+.customRollResult {
+  color: white;
+  width: 140px;
+  margin-left: 8px;
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+}
+
+.averaged {
+  color: white;
+  width: 152px;
+  text-align: center;
+  font-family: 'Cabin', sans-serif;
+}
+
+/* NPC CSS */
+.enemyContainer {
+  -webkit-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  margin-top: 12px;
+  margin-left: 805px;
+  position: absolute;
+  padding: 5px;
+  text-align: center;
+  background: rgb(36, 36, 36);
+  border-radius: 15px;
+  width: 610px;
+  height: 290px;
+}
+
+/* Loot CSS */
+.lootContainter {
+  -webkit-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  margin-top: 322px;
+  margin-left: 805px;
+  position: absolute;
+  padding: 5px;
+  text-align: center;
+  background: rgb(36, 36, 36);
+  border-radius: 15px;
+  width: 610px;
+  height: 290px;
+}
+
+/* Login */
+.loginContainer {
+  -webkit-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  margin-left: 1215px;
+  margin-top: 20px;
+  position: absolute;
+}
+
+.loginButton {
+  -webkit-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  border-style: none;
+  border-radius: 4px;
+  background: #ba6d61;
+  color: white;
+  width: 100px;
+  height: 40px;
+  padding: 7px;
+  font-size: 20px;
+  font-family: 'Cabin', sans-serif;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+.loginAction {
+  -webkit-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 8px 9px -8px rgba(0, 0, 0, 0.75);
+  border-style: none;
+  border-radius: 4px;
+  background: #ba6d61;
+  color: white;
+  width: 50px;
+  height: 30px;
+  padding: 2px;
+  font-size: 15px;
+  font-family: 'Cabin', sans-serif;
+  text-shadow: 0px 1px 1px #4d4d4d;
+}
+
+.inputEmail {
+  width: 170px;
+}
+
+.inputPassword {
+  width: 170px;
+}
+
+.inputLogin {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+/* Sign Up */
+.signupContainer {
+  -webkit-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  margin-left: 1321px;
+  margin-top: 20px;
+  position: absolute;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.signupButton {
+  -webkit-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  border-style: none;
+  border-radius: 4px;
+  background: #ba6d61;
   color: white;
+  width: 100px;
+  height: 40px;
+  padding: 7px;
+  font-size: 20px;
+  font-family: 'Cabin', sans-serif;
+  text-shadow: 0px 1px 1px #4d4d4d;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.signupAction {
+  -webkit-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 13px 14px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 8px 9px -8px rgba(0, 0, 0, 0.75);
+  border-style: none;
+  border-radius: 4px;
+  background: #ba6d61;
+  color: white;
+  width: 70px;
+  height: 30px;
+  padding: 2px;
+  font-size: 15px;
+  font-family: 'Cabin', sans-serif;
+  text-shadow: 0px 1px 1px #4d4d4d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.regEmail {
+  width: 170px;
+}
+
+.regPassword {
+  width: 170px;
+}
+
+.regSignup {
+  text-align: center;
+}
+
+/* Misc */
+
+.appLogo {
+  width: 350px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(2, 2, 2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #61aeba;
+  border-radius: 10px;
+}
+
+.popup {
+  width: 190px;
+  text-align: center;
+  cursor: auto;
 }
