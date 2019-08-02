@@ -1,6 +1,6 @@
 import React from "react"
 import Popup from "reactjs-popup"
-// import firebase from "firebase"
+import firebase from "firebase"
 
 class Login extends React.Component {
   render() {
