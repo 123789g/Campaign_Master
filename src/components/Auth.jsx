@@ -1,26 +1,29 @@
 import React from "react"
 import Popup from "reactjs-popup"
-import firebase from "firebase"
 
-class Login extends React.Component {
+class Auth extends React.Component {
   render() {
     return (
-      <div className="loginContainer">
-        <Popup trigger={<button className="loginButton">Login</button>} modal>
+      <div className="authContainer">
+        <Popup
+          trigger={<button className="authButton">Login / SignUp</button>}
+          modal
+        >
           {close => (
             <div className="popup">
               <a className="popup" onClick={close}>
                 &times;
               </a>
               <div />
-              <div className="inputLogin">
-                <input className="inputEmail" placeholder=" Enter Your Email" />
+              <div className="authLogin">
+                <input className="authEmail" placeholder=" Enter Your Email" />
                 <input
-                  className="inputPassword"
+                  className="authPassword"
                   placeholder="Enter Your Password"
                 />
               </div>
               <button className="loginAction"> Login </button>
+              <button className="regAction"> Create an Account </button>
             </div>
           )}
         </Popup>
@@ -28,4 +31,4 @@ class Login extends React.Component {
     )
   }
 }
-export default Login
+export default Auth
