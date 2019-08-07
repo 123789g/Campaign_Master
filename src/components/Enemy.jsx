@@ -11,7 +11,7 @@ class Enemy extends React.Component {
     )
   }
   state = {
-    speed: 10
+    speed: " "
   }
 }
 export default Enemy
