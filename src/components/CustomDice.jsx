@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react'
 
 class CustomDice extends React.Component {
   render() {
@@ -26,27 +26,30 @@ class CustomDice extends React.Component {
             </div>
           </label>
         </form>
-        <button className="customDiceButtonCSS" onClick={this.applyMath}>
-          Roll
-        </button>
+        <div>
+          <button className="customDiceButtonCSS" onClick={this.applyMath}>
+            Roll
+          </button>
+        </div>
         <p className="customRollResult">{this.state.customRoll.toString()}</p>
         <p className="averaged">Average - {this.averageRoll()}</p>
       </div>
     )
   }
+
   //   State Management
   state = {
-    numSides: "",
-    numDice: "",
+    numSides: '',
+    numDice: '',
     customRoll: [],
-    averageState: ""
+    averageState: ''
   }
 
   // Methods to change the State based on the target value (user input)
-  updateSides(event) {
+  updateSides = event => {
     this.setState({ numSides: event.target.value.substr(0, 3) })
   }
-  updateDice(event) {
+  updateDice = event => {
     this.setState({ numDice: event.target.value.substr(0, 1) })
   }
 
@@ -60,7 +63,7 @@ class CustomDice extends React.Component {
     this.setState({ customRoll })
   }
   // Misc - Math (Getting Sum and Average)
-  averageRoll() {
+  averageRoll = () => {
     let sum = 0
     let arrLength = this.state.customRoll.length
     for (let i in this.state.customRoll) {
@@ -75,5 +78,4 @@ class CustomDice extends React.Component {
     e.preventDefault()
   }
 }
-
 export default CustomDice
