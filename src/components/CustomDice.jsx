@@ -1,42 +1,6 @@
 import React from 'react'
 
 class CustomDice extends React.Component {
-  render() {
-    return (
-      <div className="customDiceBox">
-        <form onSubmit={this.enterPrevention}>
-          <label className="customDiceHeader">
-            Number of Sides
-            <div className="inputWrapper">
-              <input
-                value={this.state.numSides}
-                onChange={this.updateSides.bind(this)}
-              />
-            </div>
-          </label>
-        </form>
-        <form onSubmit={this.enterPrevention}>
-          <label className="customDiceHeader">
-            Number of Throws
-            <div className="inputWrapper">
-              <input
-                value={this.state.numDice}
-                onChange={this.updateDice.bind(this)}
-              />
-            </div>
-          </label>
-        </form>
-        <div>
-          <button className="customDiceButtonCSS" onClick={this.applyMath}>
-            Roll
-          </button>
-        </div>
-        <p className="customRollResult">{this.state.customRoll.toString()}</p>
-        <p className="averaged">Average - {this.averageRoll()}</p>
-      </div>
-    )
-  }
-
   //   State Management
   state = {
     numSides: '',
@@ -76,6 +40,41 @@ class CustomDice extends React.Component {
   // Misc - Prevent Enter from breaking EVERYTHING
   enterPrevention = e => {
     e.preventDefault()
+  }
+  render() {
+    return (
+      <div className="customDiceBox">
+        <form onSubmit={this.enterPrevention}>
+          <label className="customDiceHeader">
+            Number of Sides
+            <div className="inputWrapper">
+              <input
+                value={this.state.numSides}
+                onChange={this.updateSides.bind(this)}
+              />
+            </div>
+          </label>
+        </form>
+        <form onSubmit={this.enterPrevention}>
+          <label className="customDiceHeader">
+            Number of Throws
+            <div className="inputWrapper">
+              <input
+                value={this.state.numDice}
+                onChange={this.updateDice.bind(this)}
+              />
+            </div>
+          </label>
+        </form>
+        <div>
+          <button className="customDiceButtonCSS" onClick={this.applyMath}>
+            Roll
+          </button>
+        </div>
+        <p className="customRollResult">{this.state.customRoll.toString()}</p>
+        <p className="averaged">Average - {this.averageRoll()}</p>
+      </div>
+    )
   }
 }
 export default CustomDice

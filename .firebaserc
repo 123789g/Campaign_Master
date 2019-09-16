@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "campaign-master-f41cf"
+    "default": "campaign-master-f41cf",
+    "CM": "campaign-master-f41cf"
   }
 }
