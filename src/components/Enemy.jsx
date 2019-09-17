@@ -1,14 +1,22 @@
 import React from 'react'
-import firebase from 'firebase'
-import { base } from '../config/fire'
+import fire from '../config/fire'
 
 class Enemy extends React.Component {
   render() {
-    return <div className="enemyContainer">Enemy Box</div>
-  }
-  // Store Firebase Result in State
-  state = {
-    testValue: null
+    const db = fire.firestore()
+    const docCreature = db
+      .collection('Creatures')
+      .doc('Beast')
+      .get()
+      .then(querySnapshot => querySnapshot.data())
+      .then(console.log('Got the Documents'))
+      .then(console.log)
+
+    return (
+      <div className="enemyContainer">
+        <h1>Enemy Box </h1>
+      </div>
+    )
   }
 }
 export default Enemy
