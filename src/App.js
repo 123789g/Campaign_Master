@@ -4,7 +4,7 @@ import Header from './components/Header'
 import Dice from './components/Dice'
 import CustomDice from './components/CustomDice'
 import Map from './components/Map'
-import Enemy from './components/Enemy'
+import NPC from './components/NPC'
 import Loot from './components/Loot'
 import Auth from './components/Auth'
 
@@ -13,7 +13,7 @@ function App() {
     <div>
       <Header />
       <Map />
-      <Enemy />
+      <NPC />
       <Loot />
       <Dice />
       <CustomDice />
