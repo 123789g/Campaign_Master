@@ -2,6 +2,9 @@ import React from 'react'
 import fire from '../config/fire'
 
 class NPC extends React.Component {
+  state = {
+    test: undefined
+  }
   render() {
     const db = fire.firestore()
     const fireHostileA = db.collection('Hostile').doc('Animal')
@@ -18,9 +21,10 @@ class NPC extends React.Component {
     const fireNonHostileH = db.collection('NonHostile').doc('Human')
     const fireNonHostileS = db.collection('NonHostile').doc('Spirit')
 
-    fireHostileH
+    fireNonHostileH
       .get()
-      .then(querySnapshot => querySnapshot.data())
+      .then(snapshot => snapshot.data())
+
       .then(console.log)
 
     return (
