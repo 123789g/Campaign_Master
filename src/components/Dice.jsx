@@ -1,58 +1,135 @@
 import React from "react"
+import { Button, Card, Typography } from "@material-ui/core"
+import CssBaseline from "@material-ui/core/CssBaseline"
 
 class Dice extends React.Component {
   render() {
     // Show the Buttons and the Containers that 'hold' them in place.
     return (
-      <div className="DiceBox">
-        <div className="D4Container">
-          <div>
-            <button className="RollD4Button" onClick={this.rollD4}>
-              D4
-            </button>
-            <p className="D4Value"> Result:{this.state.d4rollValue}</p>
+      <div
+        style={{
+          padding: " 2%"
+        }}
+      >
+        <CssBaseline />
+        <Card
+          elevation="5"
+          style={{
+            height: "370px",
+            width: "200px",
+            background: "#242424",
+            borderRadius: "8px"
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              padding: "10%"
+            }}
+          >
+            <div
+              style={{
+                display: "flex"
+              }}
+            >
+              <Button onClick={this.rollD4}>D4</Button>
+              <div
+                style={{
+                  width: "10px",
+                  height: "10px"
+                }}
+              />
+              <Typography> Result:{this.state.d4rollValue}</Typography>
+            </div>
+
+            <br />
+            <div
+              style={{
+                display: "flex"
+              }}
+            >
+              <Button onClick={this.rollD6}>D6</Button>
+              <div
+                style={{
+                  width: "10px",
+                  height: "10px"
+                }}
+              />
+              <Typography> Result:{this.state.d6rollValue}</Typography>
+            </div>
+
+            <br />
+
+            <div
+              style={{
+                display: "flex"
+              }}
+            >
+              <Button onClick={this.rollD8}>D8</Button>
+              <div
+                style={{
+                  width: "10px",
+                  height: "10px"
+                }}
+              />
+              <Typography> Result:{this.state.d8rollValue}</Typography>
+            </div>
+
+            <br />
+
+            <div
+              style={{
+                display: "flex"
+              }}
+            >
+              <Button onClick={this.rollD10}>D10</Button>
+              <div
+                style={{
+                  width: "10px",
+                  height: "10px"
+                }}
+              />
+              <Typography> Result:{this.state.d10rollValue}</Typography>
+            </div>
+
+            <br />
+
+            <div
+              style={{
+                display: "flex"
+              }}
+            >
+              <Button onClick={this.rollD12}>D12</Button>
+              <div
+                style={{
+                  width: "10px",
+                  height: "10px"
+                }}
+              />
+              <Typography> Result:{this.state.d12rollValue}</Typography>
+            </div>
+
+            <br />
+
+            <div
+              style={{
+                display: "flex"
+              }}
+            >
+              <Button onClick={this.rollD20}>D20</Button>
+              <div
+                style={{
+                  width: "10px",
+                  height: "10px"
+                }}
+              />
+              <Typography> Result:{this.state.d20rollValue}</Typography>
+            </div>
           </div>
-        </div>
-        <div className="D6Container">
-          <div>
-            <button className="RollD6Button" onClick={this.rollD6}>
-              D6
-            </button>
-            <p className="D6Value"> Result:{this.state.d6rollValue}</p>
-          </div>
-        </div>
-        <div className="D8Container">
-          <div>
-            <button className="RollD8Button" onClick={this.rollD8}>
-              D8
-            </button>
-            <p className="D8Value"> Result:{this.state.d8rollValue}</p>
-          </div>
-        </div>
-        <div className="D10Container">
-          <div>
-            <button className="RollD10Button" onClick={this.rollD10}>
-              D10
-            </button>
-            <p className="D10Value">Result:{this.state.d10rollValue}</p>
-          </div>
-        </div>
-        <div className="D12Container">
-          <div>
-            <button className="RollD12Button" onClick={this.rollD12}>
-              D12
-            </button>
-            <p className="D12Value">Result:{this.state.d12rollValue}</p>
-          </div>
-        </div>
-        <div className="D20Container">
-          <div>
-            <button className="RollD20Button" onClick={this.rollD20}>
-              D20
-            </button>
-            <p className="D20Value">Result:{this.state.d20rollValue}</p>
-          </div>
-        </div>
+        </Card>
       </div>
     )
   }

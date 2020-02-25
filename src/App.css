@@ -1,23 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
-
-body {
-  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(
-      #1d1d1d 25%,
-      #1a1a1a 25%,
-      #1a1a1a 50%,
-      transparent 50%,
-      transparent 75%,
-      #242424 75%,
-      #242424
-    );
-  background-color: #131313;
-  background-size: 20px 20px;
-}
+@import url("https://fonts.googleapis.com/css?family=Cabin&display=swap");
 
 .Header {
   display: flex;
@@ -40,7 +21,7 @@ body {
   margin-top: 15px;
   margin-left: 15px;
   padding: 5px;
-  background: rgb(36, 36, 36);
+  background: #242424;
   border-radius: 15px;
   width: 152px;
   height: 200px;
@@ -61,7 +42,7 @@ body {
 .D4Value {
   display: inline;
   padding-left: 5px;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   text-shadow: 0px 1px 1px #4d4d4d;
 }
 
@@ -76,7 +57,7 @@ body {
 .D6Value {
   display: inline;
   padding-left: 5px;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   text-shadow: 0px 1px 1px #4d4d4d;
 }
 
@@ -91,7 +72,7 @@ body {
 .D8Value {
   display: inline;
   padding-left: 5px;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   text-shadow: 0px 1px 1px #4d4d4d;
 }
 
@@ -106,7 +87,7 @@ body {
 .D10Value {
   display: inline;
   padding-left: 5px;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   text-shadow: 0px 1px 1px #4d4d4d;
 }
 
@@ -121,7 +102,7 @@ body {
 .D12Value {
   display: inline;
   padding-left: 5px;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   text-shadow: 0px 1px 1px #4d4d4d;
 }
 
@@ -136,7 +117,7 @@ body {
 .D20Value {
   display: inline;
   padding-left: 5px;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   text-shadow: 0px 1px 1px #4d4d4d;
 }
 
@@ -146,15 +127,7 @@ button {
   border-radius: 4px;
   background: #ba6d61;
   color: white;
-  width: 40px;
-  padding: 3px 8px;
-  font-family: 'Cabin', sans-serif;
-  text-shadow: 0px 1px 1px #4d4d4d;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+  font-family: "Cabin", sans-serif;
   user-select: none;
 }
 
@@ -199,7 +172,7 @@ input {
   font-size: 15px;
   background: rgb(36, 36, 36);
   color: white;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   text-align: center;
   display: flex;
 }
@@ -230,7 +203,7 @@ input {
   color: white;
   width: 195px;
   text-align: left;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
 }
 
 .customDiceButtonCSS {
@@ -240,7 +213,7 @@ input {
   color: white;
   width: 47px;
   padding: 3px 8px;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
 }
 
 .customRollResult {
@@ -248,14 +221,14 @@ input {
   width: 140px;
   margin-left: 8px;
   text-align: center;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
 }
 
 .averaged {
   color: white;
   width: 152px;
   text-align: center;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
 }
 
 /* NPC CSS */
@@ -318,7 +291,7 @@ input {
   height: 40px;
   padding: 7px;
   font-size: 20px;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   text-shadow: 0px 1px 1px #4d4d4d;
 }
 
@@ -336,7 +309,7 @@ input {
   padding: 2px;
   font-size: 15px;
 
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   text-shadow: 0px 1px 1px #4d4d4d;
 }
 
@@ -353,7 +326,7 @@ input {
   height: 30px;
   padding: 2px;
   font-size: 15px;
-  font-family: 'Cabin', sans-serif;
+  font-family: "Cabin", sans-serif;
   text-shadow: 0px 1px 1px #4d4d4d;
   margin-left: 100px;
 }

@@ -1,12 +1,13 @@
-import React from 'react'
-
+import React from "react"
+import { Button, Card, Input, IconButton, Typography } from "@material-ui/core"
+import CasinoIcon from "@material-ui/icons/Casino"
 class CustomDice extends React.Component {
   //   State Management
   state = {
-    numSides: '',
-    numDice: '',
+    numSides: "",
+    numDice: "",
     customRoll: [],
-    averageState: ''
+    averageState: ""
   }
 
   // Methods to change the State based on the target value (user input)
@@ -43,36 +44,74 @@ class CustomDice extends React.Component {
   }
   render() {
     return (
-      <div className="customDiceBox">
-        <form onSubmit={this.enterPrevention}>
-          <label className="customDiceHeader">
-            Number of Sides
-            <div className="inputWrapper">
-              <input
-                value={this.state.numSides}
-                onChange={this.updateSides.bind(this)}
-              />
+      <div
+        style={{
+          padding: " 2%"
+        }}
+      >
+        <Card
+          elevation="5"
+          style={{
+            display: "flex",
+            height: "270px",
+            width: "200px",
+            background: "#242424",
+            borderRadius: "8px",
+            alignItems: "center",
+            justifyContent: "space-evenly"
+          }}
+        >
+          <div
+            style={{
+              textAlignLast: "center"
+            }}
+          >
+            <form onSubmit={this.enterPrevention}>
+              <label>
+                Number of Sides
+                <div
+                  style={{
+                    width: "50px",
+                    margin: "auto",
+                    paddingBottom: "8px"
+                  }}
+                >
+                  <Input
+                    value={this.state.numSides}
+                    onChange={this.updateSides.bind(this)}
+                  />
+                </div>
+              </label>
+            </form>
+            <form onSubmit={this.enterPrevention}>
+              <label>
+                Number of Throws
+                <div
+                  style={{
+                    width: "50px",
+                    margin: "auto",
+                    paddingBottom: "8px"
+                  }}
+                >
+                  <Input
+                    value={this.state.numDice}
+                    onChange={this.updateDice.bind(this)}
+                  />
+                </div>
+              </label>
+            </form>
+            <div>
+              <IconButton onClick={this.applyMath}>
+                <CasinoIcon />
+              </IconButton>
             </div>
-          </label>
-        </form>
-        <form onSubmit={this.enterPrevention}>
-          <label className="customDiceHeader">
-            Number of Throws
-            <div className="inputWrapper">
-              <input
-                value={this.state.numDice}
-                onChange={this.updateDice.bind(this)}
-              />
+            <div>
+              <Typography>{this.state.customRoll.toString()}</Typography>
+              <br />
+              <Typography>Average - {this.averageRoll()}</Typography>
             </div>
-          </label>
-        </form>
-        <div>
-          <button className="customDiceButtonCSS" onClick={this.applyMath}>
-            Roll
-          </button>
-        </div>
-        <p className="customRollResult">{this.state.customRoll.toString()}</p>
-        <p className="averaged">Average - {this.averageRoll()}</p>
+          </div>
+        </Card>
       </div>
     )
   }

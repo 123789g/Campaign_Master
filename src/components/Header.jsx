@@ -4,7 +4,12 @@ import Logo from "../img/Logo.png"
 class Header extends React.Component {
   render() {
     return (
-      <div>
+      <div
+        style={{
+          paddingTop: "1%",
+          paddingLeft: "2%"
+        }}
+      >
         <header className="Header">
           <a href="localhost:3000">
             <img src={Logo} className="appLogo" />
